@@ -1,0 +1,59 @@
+/* tokens.css —— 设计变量
+   视觉方向：暖色「深夜办公室」——深可可底、焦糖主色、奶油文字、砖红警示。
+   色板取自 hyperframes-creative / palettes：warm-editorial + jewel-rich 的暖色族
+   （#432818 #6F1D1B #99582A #BB9457 #FFE6A7 · #F4A261 #E76F51 #E9C46A）。
+   像素画布是唯一的「怀旧」元素，外壳做成现代工具感，形成对比。 */
+
+:root {
+  /* ---- 背景层次 ---- */
+  --bg: #17100c;
+  --bg-2: #1d1511;
+  --surface: #241a15;
+  --surface-2: #2e211a;
+  --surface-3: #3a2a20;
+  --inset: #120c09;
+
+  /* ---- 线条 ---- */
+  --line: #4a3527;
+  --line-soft: #362519;
+  --line-strong: #5d4433;
+
+  /* ---- 文字 ---- */
+  --text: #f7ebd9;
+  --dim: #c9b39a;
+  --muted: #8f7761;
+
+  /* ---- 主题色 ---- */
+  --accent: #f0a04b;         /* 焦糖：主行动 */
+  --accent-strong: #ffc277;  /* 高光 */
+  --accent-deep: #d97f2e;
+  --amber: #ffc46b;
+  --danger: #e2574c;         /* 砖红 */
+  --info: #e0b980;
+  --code: #e2a45c;
+  --content: #d98fa6;
+  --service: #a8b263;
+
+  /* ---- 字体 ---- */
+  --font-ui: "Inter", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", system-ui, sans-serif;
+  --font-num: ui-monospace, "SF Mono", "Cascadia Mono", Consolas, monospace;
+
+  /* ---- 尺寸 ---- */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 14px;
+  --gap: 10px;
+  --rail-w: 58px;
+  --insp-w: clamp(420px, 40vw, 620px);
+  --hud-h: 44px;
+
+  /* ---- 阴影 ---- */
+  --shadow-1: 0 1px 2px #0008, 0 8px 24px #0006;
+  --shadow-2: 0 18px 60px #000a;
+
+  --ease: cubic-bezier(.2, .8, .3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --ease: linear; }
+}

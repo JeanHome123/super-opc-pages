@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="一人公司物语 —— 一个人加一群 AI agent，做成一家真正的公司。">
+<meta name="theme-color" content="#070a0e">
+<title>一人公司物语 · 复刻版</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body data-view="office" data-pane="team">
+<div id="app">
+  <nav id="rail" aria-label="主导航">
+    <div class="rail-brand">OPC</div>
+    <button type="button" data-pane="team" class="on"><span class="ico">👥</span><span>团队</span></button>
+    <button type="button" data-pane="orders"><span class="ico">📋</span><span>订单</span></button>
+    <button type="button" data-pane="company"><span class="ico">🏢</span><span>公司</span></button>
+    <button type="button" data-pane="log"><span class="ico">📜</span><span>日志</span></button>
+    <div class="rail-spacer"></div>
+    <button type="button" data-act="fullscreen"><span class="ico">⛶</span><span>全屏</span></button>
+  </nav>
+
+  <header class="hud" id="stats" aria-label="公司状态"></header>
+  <div id="saveStatus" role="status" aria-live="polite" hidden></div>
+
+  <main id="main">
+    <div class="stage" id="stage">
+      <canvas id="cv" width="960" height="540" aria-label="像素办公室"></canvas>
+    </div>
+    <div class="ticker" id="ticker"></div>
+    <div class="dock">
+      <div class="dock-row" id="dockMain"></div>
+      <div class="dock-row actions" id="dockActions"></div>
+    </div>
+  </main>
+
+  <aside id="inspector" data-pane="team">
+    <div id="inspTabs"></div>
+    <div id="inspBody">
+      <section id="objectives" data-pane="team" aria-label="新手目标"></section>
+      <section id="agents" data-pane="team" aria-label="团队"></section>
+      <section id="projects" data-pane="team" aria-label="进行中项目"></section>
+      <section id="offers" data-pane="orders" aria-label="订单板"></section>
+      <section id="legacy" data-pane="company" aria-label="传承与图鉴"></section>
+      <section id="office" data-pane="company" aria-label="办公室"></section>
+      <section id="chapter" data-pane="company" aria-label="章节进度"></section>
+      <section id="upgrades" data-pane="company" aria-label="公司升级"></section>
+      <section id="market" data-pane="company" aria-label="模型市场"></section>
+      <section id="report" data-pane="log" aria-label="日报"></section>
+      <section id="log" data-pane="log" aria-label="公司日志"></section>
+    </div>
+  </aside>
+
+  <nav id="tabs" aria-label="移动端导航">
+    <button type="button" data-view="office" class="on"><span class="ico">🏢</span><span>办公</span></button>
+    <button type="button" data-pane="team"><span class="ico">👥</span><span>团队</span></button>
+    <button type="button" data-pane="orders"><span class="ico">📋</span><span>订单</span></button>
+    <button type="button" data-pane="company"><span class="ico">🏢</span><span>公司</span></button>
+    <button type="button" data-pane="log"><span class="ico">📜</span><span>日志</span></button>
+  </nav>
+
+  <button id="fab" type="button" data-act="next">下一天 ▶</button>
+</div>
+
+<div id="toasts" aria-live="polite"></div>
+
+<div id="modal" aria-hidden="true"><div id="modalBody" role="dialog" aria-modal="true"></div></div>
+
+<div id="boot"><div class="boot-box">
+  <h2>一人公司物语</h2>
+  <p class="dim" id="bootStatus">正在加载模块…</p>
+</div></div>
+
+<script src="js/manifest.js"></script>
+<script src="js/boot.js"></script>
+</body>
+</html>
